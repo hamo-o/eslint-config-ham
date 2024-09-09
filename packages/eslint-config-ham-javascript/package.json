@@ -1,8 +1,11 @@
 {
   "name": "eslint-config-ham-javascript",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "exports": {
     ".": "./index.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "description": "",
   "main": "index.js",
