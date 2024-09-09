@@ -1,13 +1,14 @@
 {
+  "eslint.enable": true,
+  "eslint.validate": ["javascript", "html"],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit",
-    "source.fixAll.stylelint": "explicit"
+    "source.fixAll.eslint": "always",
+    "source.fixAll.stylelint": "always"
   },
   "eslint.workingDirectories": [
     {
       "mode": "auto"
     }
   ],
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.formatOnSave": true
 }
