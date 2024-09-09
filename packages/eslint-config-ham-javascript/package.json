@@ -1,10 +1,16 @@
 {
   "name": "eslint-config-ham-javascript",
   "version": "0.0.0",
+  "exports": {
+    ".": "./index.js"
+  },
   "description": "",
   "main": "index.js",
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "devDependencies": {}
+  "devDependencies": {
+    "eslint-plugin-import": "^2.30.0",
+    "globals": "^15.9.0"
+  }
 }

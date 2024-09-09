@@ -1,19 +1,31 @@
-export default {
-  extends: [
-    "./rules/best-practices",
-    "./rules/errors",
-    "./rules/node",
-    "./rules/style",
-    "./rules/variables",
-    "./rules/es6",
-    "./rules/imports",
-    "./rules/strict",
-  ].map(require.resolve),
-  env: {
-    browser: true,
-    node: true,
-    es6: true,
-    commonjs: true,
-    jest: true,
+const globals = require("globals");
+const bestPractices = require("./rules/best-practices");
+const errors = require("./rules/errors");
+const style = require("./rules/style");
+const variables = require("./rules/variables");
+const es6 = require("./rules/es6");
+const imports = require("./rules/imports");
+const strict = require("./rules/strict");
+
+module.exports = [
+  ...bestPractices,
+  ...errors,
+  ...style,
+  ...variables,
+  ...es6,
+  ...imports,
+  ...strict,
+  {
+    languageOptions: {
+      ecmaVersion: 2022,
+      sourceType: "module",
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+        ...globals.es6,
+        ...globals.commonjs,
+        ...globals.jest,
+      },
+    },
   },
-};
+];
