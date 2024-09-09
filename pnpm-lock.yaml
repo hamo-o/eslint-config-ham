@@ -20,9 +20,24 @@ importers:
 
   example:
     devDependencies:
+      eslint-config-ham-html:
+        specifier: workspace:*
+        version: link:../packages/eslint-config-ham-html
+      eslint-config-ham-javascript:
+        specifier: workspace:*
+        version: link:../packages/eslint-config-ham-javascript
       vite:
         specifier: ^5.4.3
         version: 5.4.3
+
+  packages/eslint-config-ham-html:
+    devDependencies:
+      '@html-eslint/eslint-plugin':
+        specifier: ^0.26.0
+        version: 0.26.0
+      '@html-eslint/parser':
+        specifier: ^0.26.0
+        version: 0.26.0
 
   packages/eslint-config-ham-javascript: {}
 
@@ -483,6 +498,18 @@ packages:
       levn: 0.4.1
     dev: true
 
+  /@html-eslint/eslint-plugin@0.26.0:
+    resolution: {integrity: sha512-ovmAYVN/Wv+OX77FrSSyPxBokOg6hvxuiTRXhbN1rnZ7DwCmHjnvVyDlkTeWQHmuwFF2n8yLu2B/X9AMA9KxNw==}
+    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: true
+
+  /@html-eslint/parser@0.26.0:
+    resolution: {integrity: sha512-o82iUf7HLV6W48voPByAVTPALlWyF4PR9/2YOUlyXY9Ff7bbu9IdxU9Oc5t82Jwx4kOH5gJiZi3cee+CFB9OBQ==}
+    engines: {node: '>=8.10.0'}
+    dependencies:
+      es-html-parser: 0.0.9
+    dev: true
+
   /@humanwhocodes/module-importer@1.0.1:
     resolution: {integrity: sha512-bxveV4V8v5Yb4ncFTT3rPSgZBOpCkjfK0y4oVVVJwIuDVBRMDXrPyXRL988i5ap9m9bnyEEjWfm5WkBmtffLfA==}
     engines: {node: '>=12.22'}
@@ -842,6 +869,10 @@ packages:
     dependencies:
       ansi-colors: 4.1.3
       strip-ansi: 6.0.1
+    dev: true
+
+  /es-html-parser@0.0.9:
+    resolution: {integrity: sha512-oniQMi+466VFsDzcdron9Ry/sqUJpDJg1bbDn0jFJKDdxXhwIOYDr4DgBnO5/yPLGj2xv+n5yy4L1Q0vAC5TYQ==}
     dev: true
 
   /esbuild@0.21.5:
