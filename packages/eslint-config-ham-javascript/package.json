@@ -1,0 +1,9 @@
+{
+  "name": "eslint-config-ham-javascript",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
