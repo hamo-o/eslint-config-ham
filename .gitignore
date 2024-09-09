@@ -1,4 +1,7 @@
 # 터보레포
 .turbo
 
+# changeset
+.changeset
+
 node_modules
