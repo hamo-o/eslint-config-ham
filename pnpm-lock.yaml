@@ -14,15 +14,6 @@ importers:
       eslint:
         specifier: ^9.10.0
         version: 9.10.0
-      eslint-config-prettier:
-        specifier: ^9.1.0
-        version: 9.1.0(eslint@9.10.0)
-      eslint-plugin-prettier:
-        specifier: ^5.2.1
-        version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@9.10.0)(prettier@3.3.3)
-      prettier:
-        specifier: 3.3.3
-        version: 3.3.3
       turbo:
         specifier: ^2.1.1
         version: 2.1.1
@@ -35,6 +26,15 @@ importers:
       eslint-config-ham-javascript:
         specifier: workspace:*
         version: link:../packages/eslint-config-ham-javascript
+      eslint-config-prettier:
+        specifier: ^9.1.0
+        version: 9.1.0(eslint@9.10.0)
+      eslint-plugin-prettier:
+        specifier: ^5.2.1
+        version: 5.2.1(eslint-config-prettier@9.1.0)(eslint@9.10.0)(prettier@3.3.3)
+      prettier:
+        specifier: 3.3.3
+        version: 3.3.3
       vite:
         specifier: ^5.4.3
         version: 5.4.3

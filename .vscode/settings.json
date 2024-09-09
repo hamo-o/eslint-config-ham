@@ -2,13 +2,13 @@
   "eslint.enable": true,
   "eslint.validate": ["javascript", "html"],
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always",
-    "source.fixAll.stylelint": "always"
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
   },
   "eslint.workingDirectories": [
     {
       "mode": "auto"
     }
   ],
-  "editor.formatOnSave": true
+  "editor.formatOnSave": false
 }
