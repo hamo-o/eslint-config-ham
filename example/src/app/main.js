@@ -1,4 +1,4 @@
-import { setupCounter } from "../features/counter";
+import { setupCounter } from "../features";
 import javascriptLogo from "../shared/javascript.svg";
 
 import "./style.css";
