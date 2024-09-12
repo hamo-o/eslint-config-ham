@@ -12,7 +12,7 @@
   "keywords": [],
   "author": "",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "eslint-plugin-import": "^2.30.0",
     "globals": "^15.9.0"
   }
