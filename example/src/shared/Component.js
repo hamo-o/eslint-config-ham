@@ -10,7 +10,7 @@ export class Component {
 
   static template() {
     // UI 구성
-    return "";
+    return html``;
   }
 
   render() {
