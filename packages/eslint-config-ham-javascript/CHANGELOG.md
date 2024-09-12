@@ -1,5 +1,11 @@
 # eslint-config-ham-javascript
 
+## 0.0.5
+
+### Patch Changes
+
+- parser 관련 오류를 해결합니다.
+
 ## 0.0.4
 
 ### Patch Changes
