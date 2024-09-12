@@ -86,14 +86,17 @@ module.exports = [
             {
               target: "./src/pages",
               from: "./src/app",
+              message: "FSD 폴더구조에 어긋납니다.",
             },
             {
               target: "./src/widgets",
               from: ["./src/app", "./src/pages"],
+              message: "FSD 폴더구조에 어긋납니다.",
             },
             {
               target: "./src/features",
               from: ["./src/app", "./src/pages", "./src/widgets"],
+              message: "FSD 폴더구조에 어긋납니다.",
             },
             {
               target: "./src/entities",
@@ -103,6 +106,7 @@ module.exports = [
                 "./src/widgets",
                 "./src/features",
               ],
+              message: "FSD 폴더구조에 어긋납니다.",
             },
             {
               target: "./src/shared",
@@ -113,6 +117,7 @@ module.exports = [
                 "./src/features",
                 "./src/entities",
               ],
+              message: "FSD 폴더구조에 어긋납니다.",
             },
           ],
         },
