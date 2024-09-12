@@ -15,11 +15,20 @@ module.exports = [
     plugins: { import: eslintImport },
 
     settings: {
+      "import/resolver": {
+        node: {
+          extensions: [".mjs", ".js", ".json"],
+        },
+      },
       "import/core-modules": [],
       "import/ignore": ["node_modules"],
     },
 
     rules: {
+      "import/no-unresolved": [
+        "error",
+        { commonjs: true, caseSensitive: true },
+      ],
       // ensure named imports coupled with named exports
       // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/named.md#when-not-to-use-it
       "import/named": "error",
