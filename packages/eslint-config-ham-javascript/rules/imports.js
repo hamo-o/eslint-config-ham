@@ -15,10 +15,11 @@ module.exports = [
     plugins: { import: eslintImport },
 
     settings: {
+      "import/parsers": {
+        espree: [".js", ".cjs", ".mjs"],
+      },
       "import/resolver": {
-        node: {
-          extensions: [".mjs", ".js", ".json"],
-        },
+        node: true,
       },
       "import/core-modules": [],
       "import/ignore": ["node_modules"],
