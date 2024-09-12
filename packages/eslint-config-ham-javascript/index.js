@@ -25,6 +25,7 @@ module.exports = [
         ...globals.es6,
         ...globals.commonjs,
         ...globals.jest,
+        html: "readonly",
       },
     },
   },
