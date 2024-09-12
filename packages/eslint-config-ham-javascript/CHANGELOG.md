@@ -1,5 +1,11 @@
 # eslint-config-ham-javascript
 
+## 0.0.7
+
+### Patch Changes
+
+- html 전역 변수를 설정합니다.
+
 ## 0.0.6
 
 ### Patch Changes
