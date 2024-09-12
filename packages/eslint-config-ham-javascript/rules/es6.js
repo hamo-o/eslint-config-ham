@@ -149,7 +149,7 @@ module.exports = [
             object: true,
           },
           AssignmentExpression: {
-            array: true,
+            array: false,
             object: false,
           },
         },
@@ -186,15 +186,14 @@ module.exports = [
       // https://eslint.org/docs/rules/rest-spread-spacing
       "rest-spread-spacing": ["error", "never"],
 
-      // import sorting
-      // https://eslint.org/docs/rules/sort-imports
+      // import 개수에 따른 정렬
       "sort-imports": [
-        "off",
+        "error",
         {
-          ignoreCase: false,
-          ignoreDeclarationSort: false,
-          ignoreMemberSort: false,
-          memberSyntaxSortOrder: ["none", "all", "multiple", "single"],
+          ignoreCase: true,
+          ignoreDeclarationSort: true,
+          ignoreMemberSort: true,
+          memberSyntaxSortOrder: ["all", "multiple", "single", "none"],
         },
       ],
 

@@ -1,6 +1,5 @@
 const globals = require("globals");
 const eslintImport = require("eslint-plugin-import");
-const path = require("path");
 
 module.exports = [
   {
@@ -46,8 +45,7 @@ module.exports = [
       // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-namespace.md
       "import/no-namespace": "off",
 
-      // Ensure consistent use of file extension within the import path
-      // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/extensions.md
+      // import 확장자 여부
       "import/extensions": [
         "error",
         "ignorePackages",
@@ -63,7 +61,6 @@ module.exports = [
         "error",
         {
           groups: [
-            "type",
             "builtin",
             "external",
             "internal",
@@ -71,48 +68,55 @@ module.exports = [
             "sibling",
             "index",
             "unknown",
-          ],
-          pathGroups: [
-            {
-              pattern: "react*",
-              group: "external",
-              position: "before",
-            },
-            {
-              pattern: "@hooks/*",
-              group: "internal",
-              position: "after",
-            },
-            {
-              pattern: "@pages/*",
-              group: "internal",
-              position: "after",
-            },
-            {
-              pattern: "@components/*",
-              group: "internal",
-              position: "after",
-            },
-            {
-              pattern: "@.scss",
-              group: "internal",
-              position: "after",
-            },
+            "type",
           ],
           alphabetize: {
             order: "asc",
+            caseInsensitive: true,
           },
+          "newlines-between": "always",
         },
       ],
 
-      // Restrict which files can be imported in a given folder
-      // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-restricted-paths.md
-      "import/no-restricted-paths": "off",
-
-      // Prevent unassigned imports
-      // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-unassigned-import.md
-      // importing for side effects is perfectly acceptable, if you need side effects.
-      "import/no-unassigned-import": "off",
+      // 특정 경로에서 import 막기
+      "import/no-restricted-paths": [
+        "error",
+        {
+          zones: [
+            {
+              target: "./src/pages",
+              from: "./src/app",
+            },
+            {
+              target: "./src/widgets",
+              from: ["./src/app", "./src/pages"],
+            },
+            {
+              target: "./src/features",
+              from: ["./src/app", "./src/pages", "./src/widgets"],
+            },
+            {
+              target: "./src/entities",
+              from: [
+                "./src/app",
+                "./src/pages",
+                "./src/widgets",
+                "./src/features",
+              ],
+            },
+            {
+              target: "./src/shared",
+              from: [
+                "./src/app",
+                "./src/pages",
+                "./src/widgets",
+                "./src/features",
+                "./src/entities",
+              ],
+            },
+          ],
+        },
+      ],
 
       // Prevent importing the default as if it were named
       // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
@@ -134,12 +138,6 @@ module.exports = [
 
       // 모든 exports는 가장 아래로
       "import/exports-last": "error",
-
-      // Reports when named exports are not grouped together in a single export declaration
-      // or when multiple assignments to CommonJS module.exports or exports object are present
-      // in a single file.
-      // https://github.com/import-js/eslint-plugin-import/blob/44a038c06487964394b1e15b64f3bd34e5d40cde/docs/rules/group-exports.md
-      "import/group-exports": "off",
 
       // Forbid a module from importing itself
       // https://github.com/import-js/eslint-plugin-import/blob/44a038c06487964394b1e15b64f3bd34e5d40cde/docs/rules/no-self-import.md
