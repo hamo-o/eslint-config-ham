@@ -16,7 +16,6 @@ module.exports = [
   ...imports,
   ...strict,
   {
-    files: ["*.js"],
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: "module",
