@@ -1,5 +1,11 @@
 # eslint-config-ham-javascript
 
+## 0.0.6
+
+### Patch Changes
+
+- 최신 ECMA 문법이 적용되도록 합니다.
+
 ## 0.0.5
 
 ### Patch Changes
