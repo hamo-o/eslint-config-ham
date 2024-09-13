@@ -1,5 +1,11 @@
 # eslint-config-ham-javascript
 
+## 0.0.8
+
+### Patch Changes
+
+- 의존성을 수정합니다.
+
 ## 0.0.7
 
 ### Patch Changes
