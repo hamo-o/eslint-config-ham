@@ -1,22 +1,32 @@
 {
   "name": "eslint-config-ham-javascript",
   "version": "0.0.7",
+  "description": "개인프로젝트를 위한 커스텀 javascript eslint 설정입니다.",
+  "main": "index.js",
   "exports": {
     ".": "./index.js"
   },
   "publishConfig": {
     "access": "public"
   },
-  "description": "",
-  "main": "index.js",
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hamo-o/eslint-config-ham"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "javascript",
+    "fsd"
+  ],
+  "author": "HAM",
   "license": "MIT",
   "dependencies": {
     "eslint-plugin-import": "^2.30.0",
+    "eslint-plugin-jsdoc": "^50.2.3",
     "globals": "^15.9.0"
   },
-  "devDependencies": {
-    "eslint-plugin-jsdoc": "^50.2.3"
+  "peerDependencies": {
+    "eslint": ">= 8"
   }
 }
