@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ham-javascript",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "개인프로젝트를 위한 커스텀 javascript eslint 설정입니다.",
   "main": "index.js",
   "exports": {
