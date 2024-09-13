@@ -1,5 +1,11 @@
 # eslint-config-ham-javascript
 
+## 0.0.11
+
+### Patch Changes
+
+- shared 폴더의 클래스들에만 jsDoc을 필수로 작성하도록 합니다.
+
 ## 0.0.10
 
 ### Patch Changes
