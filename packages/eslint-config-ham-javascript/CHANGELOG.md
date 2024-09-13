@@ -1,5 +1,11 @@
 # eslint-config-ham-javascript
 
+## 0.0.9
+
+### Patch Changes
+
+- jsdoc 설정을 추가합니다.
+
 ## 0.0.8
 
 ### Patch Changes
