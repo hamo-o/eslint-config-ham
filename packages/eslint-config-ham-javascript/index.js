@@ -6,6 +6,7 @@ const variables = require("./rules/variables");
 const es6 = require("./rules/es6");
 const imports = require("./rules/imports");
 const strict = require("./rules/strict");
+const jsdoc = require("eslint-plugin-jsdoc");
 
 module.exports = [
   ...bestPractices,
@@ -15,7 +16,9 @@ module.exports = [
   ...es6,
   ...imports,
   ...strict,
+  jsdoc.configs["flat/recommended"],
   {
+    plugins: { jsdoc },
     languageOptions: {
       ecmaVersion: 2022,
       sourceType: "module",
