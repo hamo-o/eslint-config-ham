@@ -1,5 +1,5 @@
 /**
- *  Component
+ *
  */
 export class Component {
   #target;
