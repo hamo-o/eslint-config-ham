@@ -36,11 +36,20 @@ module.exports = [
         "warn",
         {
           require: {
-            MethodDefinition: true,
-            ClassDeclaration: true,
             ArrowFunctionExpression: true,
             FunctionExpression: true,
           },
+        },
+      ],
+    },
+  },
+  {
+    files: ["src/shared/**/*.js"],
+    rules: {
+      "jsdoc/require-jsdoc": [
+        "warn",
+        {
+          require: { ClassDeclaration: true, MethodDefinition: true },
         },
       ],
     },
