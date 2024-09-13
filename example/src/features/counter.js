@@ -4,6 +4,10 @@
  */
 export function setupCounter(element) {
   let counter = 0;
+  /**
+   *
+   * @param {number} count - The count to set
+   */
   const setCounter = (count) => {
     counter = count;
     element.innerHTML = `count is ${counter}`;
