@@ -10,5 +10,11 @@ export default [
     rules: {
       "prettier/prettier": ["error"],
     },
+    languageOptions: {
+      parserOptions: {
+        ecmaVersion: 2022,
+        sourceType: "module",
+      },
+    },
   },
 ];

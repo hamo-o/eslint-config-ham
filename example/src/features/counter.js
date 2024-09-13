@@ -1,3 +1,7 @@
+/**
+ *
+ * @param {HTMLElement} element - The element to attach the counter to
+ */
 export function setupCounter(element) {
   let counter = 0;
   const setCounter = (count) => {
